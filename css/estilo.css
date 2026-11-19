@@ -1,0 +1,41 @@
+/* paleta de cores */
+:root {
+    --vinho: #722F45;
+    --areia: #D8C3A5;
+    --preto: #252222;
+    --branco: #FFFFFF;
+    --rosa-claro: #F3DDE2;
+}
+/* configurações gerais (fonte, cor do fundo/texto e mergem padão da pg) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+    margin: 0;
+}
+/* menu de navegação (barra com fundo vinho) */
+.navbar-delicatto {
+    background-color: var(--vinho);
+    padding: 18px 0;
+}
+
+/* nome do pet, aumenta o tamanho, define a cor branca e dastaca a fonte */
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--branco);
+}
+
+/* links do menu (cor, tamanho, espaçamento e transição)*/
+.navbar-delicatto .nav-link {
+    color: var(--branco);
+    font-size: 16px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+/* efeito quando passa o mouse (muda para um rosa bem sutil) */
+.navbar-delicatto .nav-link:hover {
+    color: var(--rosa-claro);
+}

@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicatto Pet Shop</title>
-    <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--CSS personalizado-->
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-    <h1 id="titulo"></h1>
+    <!--Menu de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-delicatto">
+        <div class="container">
+            <!--logo-->
+            <a class="navbar-brand" href="arquivo.html">Delicatto</a>
+            <!--botão do hamburguer para celular-->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavegacao"
+            aria-controls="menuNavegacao"
+            aria-expanded="false"
+            aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Links do menu-->
+    <div class="collapse navbar-collapse" id="menuNavegacao">
+        <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+                <a class="nav-link active" href="arquivo.html">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="servicos.html">Serviços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+<!--Conteúdo da página-->
+<main>
+    <div class="container">
+        <h1>Bem-vindo ao Delicatto Pet Shop!</h1>
+        <p>Estamos preparando algo especial para seu pet.</p>
+    </div>
+</main>
     <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<!--navbar: cria barra de navegação-->
+<!--expand-lg: expande o menu em telas grandes e recolhe em telar menores-->
+<!--navbar-dark: cores do texto claras para usar com fundos escuros-->
+<!--navbar-delicatto: classe personalizada para aplicar cor/estilo-->
+<!--container: centraliza e limita o conteúdo-->
+<!--brand: identifica a marca do site-->
+<!--toggler: estiliza o botão de abrir o menu-->
+<!--collapse: permite esconder/expandir o menu-->
+<!--target: qual menu será controlado pelo botão-->
+<!--navbar-nav: organiza os links de navegação-->
+<!--ms-auto: empurra os links para a direita-->
