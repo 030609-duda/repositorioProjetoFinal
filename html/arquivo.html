@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicatto Pet Shop</title>
-    <!--Bootstrap CSS-->
+    <!-- Define o título que aparece na aba do navegador -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <!--CSS personalizado-->
+    <!-- Importa o arquivo CSS do Bootstrap, utilizado para aplicar estilos prontos, organizar o layout, criar colunas e deixar o site responsivo. -->
     <link rel="stylesheet" href="../css/estilo.css">
+    <!-- Importa o CSS próprio do projeto, utilizado para definir as cores, fontes, espaçamentos e efeitos. -->
 </head>
 <body>
-    <!--Menu de navegação-->
+    <!--menu de navegação-->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-delicatto">
+        <!-- cria a barra de navegação -->
         <div class="container">
-            <!--logo-->
+            <!-- Centraliza o conteúdo e limita sua largura -->
             <a class="navbar-brand" href="arquivo.html">Delicatto</a>
+            <!-- cria o nome da marca e direciona para a página inicial ao clicar -->
             <!--botão do hamburguer para celular-->
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -22,43 +25,249 @@
             aria-controls="menuNavegacao"
             aria-expanded="false"
             aria-label="Abrir menu">
+    <!-- class="navbar-toggler": aplica o estilo do botão de menu -->
+    <!-- data-bs-toggle="collapse": ativa a função de expandir e recolher o menu -->
+    <!-- data-bs-target="#menuNavegacao": indica qual elemento será controlado pelo botão -->
+    <!-- aria-controls="menuNavegacao": identifica a área controlada pelo botão para acessibilidade -->
+    <!-- aria-expanded="false": informa que o menu começa recolhido -->
+    <!-- aria-label="Abrir menu": fornece uma descrição do botão para tecnologias assistivas -->
         <span class="navbar-toggler-icon"></span>
+        <!-- Exibe o ícone de três linhas do botão de menu -->
     </button>
     <!--Links do menu-->
     <div class="collapse navbar-collapse" id="menuNavegacao">
+        <!-- cria a área recolhível que contém os links do menu -->
+        <!-- id: identifica essa área para que o botão consiga controlá-la -->
         <ul class="navbar-nav ms-auto gap-3">
+            <!-- cria a lista de links de navegação -->
+            <!-- navbar-nav: organiza os links no formato de menu do Bootstrap -->
+            <!-- ms-auto: posiciona os links à direita -->
+            <!-- gap-3: define o espaçamento entre os itens -->
             <li class="nav-item">
+                <!-- cria um item da lista de navegação -->
                 <a class="nav-link active" href="arquivo.html">Início</a>
+                <!-- cria o link para a página inicial -->
+                <!-- active: indica que esta é a página atualmente selecionada -->
             </li>
             <li class="nav-item">
+                <!-- cria outro item da lista -->
                 <a class="nav-link" href="servicos.html">Serviços</a>
+                <!-- cria o link que direciona para a página de serviços -->
             </li>
             <li class="nav-item">
+                <!-- cria outro item da lista -->
                 <a class="nav-link" href="contato.html">Contato</a>
+                <!-- cria o link que direciona para a página de contato -->
             </li>
         </ul>
     </div>
 </div>
 </nav>
-<!--Conteúdo da página-->
+<!-- Inicia a área principal do conteúdo da página -->
 <main>
-    <div class="container">
-        <h1>Bem-vindo ao Delicatto Pet Shop!</h1>
-        <p>Estamos preparando algo especial para seu pet.</p>
+    <div class="container-fluid p-0">
+        <!-- cria um container que ocupa toda a largura disponível -->
+        <!-- p-0: remove o espaçamento interno do container -->
+        <!-- carrossel de banners -->
+        <div id="carrosselDelicatto"
+             class="carousel slide"
+             data-bs-ride="carousel"
+             data-bs-interval="5000">
+            <!-- Cria o carrossel de imagens e conteúdos -->
+            <!-- id: identifica o carrossel para os botões e indicadores -->
+            <!-- carousel: ativa o componente de carrossel do Bootstrap -->
+            <!-- slide: habilita o efeito de transição entre os banners -->
+            <!-- data-bs-ride: inicia o funcionamento automático do carrossel -->
+            <!-- data-bs-interval: define o intervalo de 5000 milissegundos entre as trocas -->
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <!-- cria os indicadores que permitem selecionar cada banner -->
+                <button type="button"
+                    data-bs-target="#carrosselDelicatto"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1">
+                </button>
+                <!-- primeiro indicador, seleciona o banner de número 0 -->
+                <!-- data-bs-target: informa qual carrossel será controlado -->
+                <!-- data-bs-slide-to: indica o número do banner que será exibido -->
+                <!-- active: define o primeiro indicador como selecionado inicialmente -->
+                <!-- aria-current: informa que esse é o indicador atual -->
+                <!-- aria-label: identifica o indicador para tecnologias assistivas -->
+                <button type="button"
+                    data-bs-target="#carrosselDelicatto"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2">
+                </button>
+                <button type="button"
+                    data-bs-target="#carrosselDelicatto"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3">
+                </button>
+            </div>
+            <!-- Conteúdo dos banners -->
+            <div class="carousel-inner">
+                <!-- agrupa todos os banners que fazem parte do carrossel -->
+                <!-- Banner 1 -->
+                <div class="carousel-item active">
+                    <!-- cria o primeiro banner e define que ele será exibido inicialmente -->
+                    <div class="row align-items-center banner-carrossel">
+                        <!-- row: organiza os elementos em uma linha utilizando o sistema de grid -->
+                        <!-- align-items-center: alinha os elementos verticalmente ao centro -->
+                        <!-- banner-carrossel: aplica as personalizações do CSS do projeto -->
+                        <div class="col-lg-6 text-center">
+                            <!-- col-lg-6: cria uma coluna que ocupa metade da linha (6/12) em telas grandes -->
+                            <!-- text-center: centraliza o conteúdo da coluna -->
+                            <h2>Seu pet merece todo o carinho do mundo! 🐾</h2>
+                            <!-- título principal do primeiro banner -->
+                            <p>
+                                Cuidamos do seu melhor amigo com carinho,
+                                atenção e dedicação.
+                            </p>
+                            <!-- texto do primeiro banner -->
+                            <a href="servicos.html"
+                               class="btn btn-delicatto">
+                                Conheça nossos serviços
+                            </a>
+                            <!-- Cria um link com aparência de botão -->
+                            <!-- href: direciona para a página de serviços -->
+                            <!-- btn: aplica a estrutura visual de botão do Bootstrap -->
+                            <!-- btn-delicatto: aplica a personalização -->
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- cria a segunda coluna (para a foto dos cachorrinhos)-->
+                            <img src="../img/img.chapeu.jpeg"
+                                 class="img-fluid"
+                                 alt="Cachorro usando chapéu">
+                            <!-- Exibe a imagem do primeiro banner -->
+                            <!-- src: indica o caminho do arquivo da imagem -->
+                            <!-- img-fluid: torna a imagem responsiva -->
+                            <!-- alt: fornece uma descrição da imagem -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center banner-carrossel">
+                        <div class="col-lg-6 text-center">>
+                            <h2>Cuidado e carinho em cada detalhe!</h2>
+                            <p>
+                                Nossa equipe oferece cuidados especiais
+                                para deixar seu pet ainda mais feliz.
+                            </p>
+                            <a href="servicos.html"
+                               class="btn btn-delicatto">
+                                Conheça nossos serviços
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="../img/img.tosa.jpeg"
+                                 class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center banner-carrossel">
+                        <div class="col-lg-6 text-center">
+                            <h2>Vamos cuidar do seu melhor amigo? 🐶</h2>
+                            <p>
+                                Entre em contato conosco!
+                                Será um prazer atender você e seu pet.
+                            </p>
+                            <a href="contato.html"
+                               class="btn btn-delicatto">
+                                Fale conosco
+                            </a>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="../img/img.rei.jpeg"
+                                 class="img-fluid"
+                                 alt="Cachorro no Delicatto Pet Shop">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Botão para voltar -->
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carrosselDelicatto"
+                data-bs-slide="prev">
+                <!-- cria o botão que permite voltar para o banner anterior -->
+                <!-- carousel-control-prev: aplica o estilo do controle anterior -->
+                <!-- data-bs-target: identifica o carrossel controlado -->
+                <!-- data-bs-slide="prev": determina que a navegação será para o banner anterior -->
+                <span class="carousel-control-prev-icon"></span>
+                <!-- ícone de seta para voltar -->
+            </button>
+            <!-- Botão para avançar -->
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carrosselDelicatto"
+                data-bs-slide="next">
+                <!-- Cria o botão que permite avançar para o próximo banner -->
+                <!-- carousel-control-next: aplica o estilo do controle seguinte -->
+                <!-- data-bs-target: identifica o carrossel controlado -->
+                <!-- data-bs-slide="next": determina que a navegação será para o próximo banner -->
+                <span class="carousel-control-next-icon"></span>
+                <!-- ícone de seta para avançar -->
+            </button>
+        </div>
     </div>
+<!-- Seção de apresentação da loja -->
+<section class="secao-apresentacao">
+    <!-- cria uma seção para apresentar o pet shop -->
+    <div class="container py-5">
+        <!-- centraliza o conteúdo e adiciona espaçamento vertical -->
+        <div class="row align-items-center">
+            <!-- cria uma linha e alinha os elementos ao centro -->
+            <!-- texto de apresentação -->
+            <div class="col-lg-7 mb-4">
+                <!-- cria uma coluna que ocupa 7 partes do grid em telas grandes -->
+                <!-- mb-4: adiciona espaçamento inferior -->
+                <h2>Bem-vindo ao Delicatto Pet Shop!</h2>
+                <p class="lead">
+                    No Delicatto, acreditamos que cada pet merece
+                    carinho, cuidado e atenção especial.
+                </p>
+                <!-- lead: aplica um estilo de destaque ao parágrafo -->
+                <p>
+                    Nosso objetivo é oferecer serviços de qualidade,
+                    proporcionando bem-estar e momentos especiais
+                    para os animais e seus tutores.
+                </p>
+            </div>>
+            <!-- Card de apresentação -->
+            <div class="col-lg-5 mb-4">
+                <!-- cria uma coluna que ocupa 5 partes do grid em telas grandes -->
+                <div class="card shadow-sm h-100 card-compromisso">
+                    <!-- cria o cartão de apresentação -->
+                    <!-- card: utiliza o componente de cartão do Bootstrap -->
+                    <!-- shadow-sm: adiciona uma sombra discreta -->
+                    <!-- h-100: faz o cartão ocupar 100% da altura disponível -->
+                    <!-- card-compromisso: aplica a personalização visual do projeto (que tá no css) -->
+                    <div class="card-body text-center p-4">
+                        <!-- cria a área interna do card -->
+                        <!-- card-body: organiza o conteúdo interno -->
+                        <!-- text-center: centraliza os textos -->
+                        <!-- p-4: adiciona espaçamento interno -->
+                        <h3 class="card-title">Nosso compromisso</h3>
+                        <p class="card-text">
+                            Cuidar de cada animal com dedicação,
+                            responsabilidade e muito carinho.
+                        </p>
+                        <p class="card-text">
+                            Porque seu melhor amigo merece o melhor!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
-    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<!-- Importa o JavaScript do Bootstrap, necessário para o funcionamento do carrossel e do menu recolhível -->
 </body>
 </html>
-
-<!--navbar: cria barra de navegação-->
-<!--expand-lg: expande o menu em telas grandes e recolhe em telar menores-->
-<!--navbar-dark: cores do texto claras para usar com fundos escuros-->
-<!--navbar-delicatto: classe personalizada para aplicar cor/estilo-->
-<!--container: centraliza e limita o conteúdo-->
-<!--brand: identifica a marca do site-->
-<!--toggler: estiliza o botão de abrir o menu-->
-<!--collapse: permite esconder/expandir o menu-->
-<!--target: qual menu será controlado pelo botão-->
-<!--navbar-nav: organiza os links de navegação-->
-<!--ms-auto: empurra os links para a direita-->

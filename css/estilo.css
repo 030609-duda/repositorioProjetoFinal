@@ -1,41 +1,191 @@
-/* paleta de cores */
+/* paleta de cores (são variáveis) */
 :root {
     --vinho: #722F45;
-    --areia: #D8C3A5;
+    --areia: #EEEAE4;
+    --areia-suave: #E2E1E0;
     --preto: #252222;
     --branco: #FFFFFF;
     --rosa-claro: #F3DDE2;
 }
+
 /* configurações gerais (fonte, cor do fundo/texto e mergem padão da pg) */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--branco);
-    color: var(--preto);
-    margin: 0;
+    font-family: Arial, sans-serif; /* define a fonte */
+    background-color: var(--branco); /* define a cor de fundo da pg */
+    color: var(--preto); /* define a cor padão dos textos */
+    margin: 0; /* remove a margem externa padrão do navegador */
 }
 /* menu de navegação (barra com fundo vinho) */
 .navbar-delicatto {
-    background-color: var(--vinho);
-    padding: 18px 0;
+    background-color: var(--vinho); /* fundo do menu */
+    padding: 18px 0; /* adiciona espaçamento em cima e em baixo */
 }
 
 /* nome do pet, aumenta o tamanho, define a cor branca e dastaca a fonte */
 .navbar-brand {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: var(--branco);
+    font-size: 28px; /* tamanho da fonte */
+    font-weight: bold; /* deixa o nome em negrito */
+    letter-spacing: 1px; /* adiciona espaço entre as letras */
+    color: var(--branco); /* cor do nome */
 }
 
 /* links do menu (cor, tamanho, espaçamento e transição)*/
 .navbar-delicatto .nav-link {
-    color: var(--branco);
-    font-size: 16px;
-    margin-left: 15px;
-    transition: 0.3s;
+    color: var(--branco); /* cor dos links */
+    font-size: 16px; /* tamanho da fonte */
+    margin-left: 15px; /* adiciona margem á esquerda de cada link  */
+    transition: 0.3s; /* mudanças visuais */
 }
 
 /* efeito quando passa o mouse (muda para um rosa bem sutil) */
 .navbar-delicatto .nav-link:hover {
-    color: var(--rosa-claro);
+    color: var(--rosa-claro); /* muda a cor do link */
+}
+
+
+/*estiliza a área de cada banner */
+.banner-carrossel {
+    background-color: #ccc9c7; /* fundo do banner */
+    min-height: 460px; /* define a altura mínima */
+    padding: 45px 9%; /* espaçamento vertical e lateral */
+    align-items: center; /* alinha os elementos no centro */
+}
+
+/* estila os títulos dentro dos banners */
+.banner-carrossel h2 {
+    color: var(--vinho); /* cor dos títulos */
+    font-size: 38px; /* fonte */
+    font-weight: bold; /* deixa em negrito */
+    line-height: 1.2; /* espaçamento entre as linhas do título */
+    margin-bottom: 20px; /* adiciona espaço a baixo do título */
+}
+/* estiliza os parágrafos */
+.banner-carrossel p {
+    color: var(--preto); /* cor dos parágrafos */
+    font-size: 18px; /* fonte */
+    line-height: 1.6; /* espaçamento entre as linhas do texto */
+    margin-bottom: 28px; /* adiciona espaço a baixo do parágrafo */
+}
+
+/* personaliza os links que funcionam como botões */
+.btn-delicatto {
+    display: inline-block; /* espaçamento mantendo o elemento na linha */
+    background-color: var(--vinho); /* fundo do botão */
+    color: var(--branco); /* cor do texto */
+    padding: 13px 28px; /* espaçamento vertical e horizontal */
+    border-radius: 30px; /* arredonda os cantos do botão */
+    font-weight: bold; /* deixa o texto do botão em negrito */
+    text-decoration: none; /* remode o sublinhado dos links */
+    transition: 0.3s; /* suaviza mudanças visuais */
+}
+/* efeito quando o mouse passa sobre o botão */
+.btn-delicatto:hover {
+    background-color: var(--preto); /* muda o fundo do botão para preto */
+    color: var(--branco); /* ,amtém a cor do texto branca */
+    transform: translateY(-3px); /* move o botão para cima */
+}
+
+/* estiliza as imagens */
+.banner-carrossel img {
+    width: 100%; /* faz a imagem coupar toda a largura disponível */
+    height: 370px; /* define altura de img */
+    object-fit: contain; /* mantém a prporção da imagem sem cortar o conteúdo */
+}
+
+/* estiliza os indicadores */
+.carousel-indicators {
+    margin-bottom: 18px; /* adiciona margem a baixo dos indicadores */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--vinho); /* cor dos indicadores */
+    width: 30px; /* largura dos indicadores */
+    height: 5px; /* altura dos indicadores */
+    border-radius: 10px; /* arredonda os cantos dos indicadores */
+}
+
+/* define a largura dos botoes laterais */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 7%; /* faz cada controle ocupar 7% da largura do carrossel */
+}
+/* estiliza as setas de navegação */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(19%) saturate(1500%) hue-rotate(290deg);
+    /* Aplica filtros para alterar a cor original das setas do Bootstrap */
+}
+
+/* Aplica estas configurações quando a tela possui largura máxima de 991px */
+@media (max-width: 991px) {
+    .banner-carrossel {
+        min-height: auto; /* altura se adapte ao conteúdo */
+        padding: 35px 20px 55px; /* define pixel em cima, na lateral e embaixo */
+        text-align: center; /* centraliza os textos */
+    }
+ 
+/* Ajusta o banner para telas menores */
+    .banner-carrossel h2 {
+        font-size: 29px; /* reduz o tamanho dos títulos */
+    }
+
+ /* Reduz o tamanho dos títulos em telas menores */
+    .banner-carrossel p {
+        font-size: 16px; /* reduz o tamanho dos parágrafos */
+    }
+
+ /* Reduz o tamanho dos parágrafos em telas menores */
+    .banner-carrossel img {
+        height: 280px; /* reduz a altura das imagens */
+        margin-top: 25px; /* adiciona espaço acima das imagens */
+    }
+}
+
+/* personaliza o título principal da seção de apresentação */
+.secao-apresentacao {
+    padding-top: 60px; /* adiciona espaçamento na parte superior */
+    padding-bottom: 60px; /* adiciona espaçamento na parte inferior */
+}
+
+/* TÍTULO DA APRESENTAÇÃO */
+.secao-apresentacao h2 {
+    color: var(--vinho); /* cor do título */
+    font-size: 32px; /* tamanho da fonte */
+    font-weight: bold; /* negrito */
+    margin-bottom: 20px; /* adiciona espaçamento na parte inferior */
+}
+
+/* TEXTO DE DESTAQUE */
+.secao-apresentacao .lead {
+    font-size: 20px; /* tamanho da fonte */
+    color: var(--preto); /*cor do texto */
+}
+
+/* SEÇÃO DE APRESENTAÇÃO */
+.secao-apresentacao {
+    background-color: var(--areia-suave); /* aplica o tom de cinza */
+    padding: 20px 0; /* espaçamento em cima e em baixo */
+}
+
+/* card compromisso */
+.card-compromisso {
+    background-color: var(--vinho); /* cor de fundo  */
+    border: none; /* remove a borda padrão do card */
+    border-radius: 18px; /* arredonda os cantos do card */
+    padding: 15px; /* espaçamento interno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* titulo do card */
+.card-compromisso h3 {
+    color: var(--branco); /* cor do título */
+    font-weight: bold; /* negrito */
+    font-size: 35px; /* tamanho do título */
+    margin-bottom: 20px; /* adiciona espaço a baixo do título */
+}
+
+/* textos do card */
+.card-compromisso p {
+    color: var(--branco); /* cor do texto */
+    line-height: 1.6; /* espaçamento entre linhas dos parágrafos */
 }
