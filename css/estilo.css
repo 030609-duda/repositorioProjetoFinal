@@ -189,3 +189,72 @@ body {
     color: var(--branco); /* cor do texto */
     line-height: 1.6; /* espaçamento entre linhas dos parágrafos */
 }
+
+/* parte da segunda página (serviços) */
+
+/* título da página de serviços */
+.titulo-servicos {
+    color: var(--vinho); /*cor do título*/
+    font-weight: bold;/*negrito*/
+}
+
+/* personalização dos cards */
+.card-servico {
+    background-color: var(--branco); /*fundo do card*/
+    border: none; /*remove a borda padrão*/
+    border-radius: 15px; /*arredonda os cantos*/
+    overflow: hidden; /*impede que o contúdo ultrapasse os limites*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12); /*sombra*/
+    transition: 0.3s; /*mudanças suaves*/
+}
+/* efeito nos cards */
+.card-servico:hover {
+    transform: translateY(-5px); /*move o card quando passa o mouse*/
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); /*aumenta a sombra durante o efeito de passar o mouse*/
+}
+/* imagens dos cards */
+.card-servico img {
+    height: 220px; /*altura das imagens*/
+    width: 100%; /*faz a imagem ocupar toda a largura disponível no card*/
+    object-fit: cover; /*ajusta a imagem para preencher o espaço*/
+}
+/* títulos */
+.card-servico .card-title {
+    color: var(--vinho); /*cor do título do card*/
+    font-weight: bold; /*negrito*/
+}
+/* textos */
+.card-servico .card-text {
+    color: var(--preto); /*cor do texto*/
+    line-height: 1.6; /*aumenta o espaçamento entre as linhas*/
+}
+
+/* Parte do rodapé */
+.rodape-delicatto {
+    background-color: var(--vinho); /*cor de fundo*/
+    color: var(--branco); /*cor do texto*/
+    padding: 40px 0 20px; /*espaçamento interno*/
+    text-align: center; /*alinha o texto no centro*/
+}
+
+.rodape-delicatto h3 {
+    font-weight: bold; /*negrito o título do rodapé*/
+    margin-bottom: 15px; /*adiciona espaço a baixo do título*/
+}
+
+.btn-rodape {
+    display: inline-block; /*Permite aplicar dimensões e espaçamentos ao link como um bloco em linha*/
+    background-color: var(--branco); /*fundo do btn*/
+    color: var(--vinho); /*cor do texto do botão*/
+    padding: 12px 28px; /*espaçamento vertical e horizontal*/
+    border-radius: 30px; /*arredonda os cantos*/
+    font-weight: bold; /*texto do botão em negrito*/
+    text-decoration: none; /*remove o sublinhado dos links*/
+    transition: 0.3s; /*mudanças suaves*/
+}
+
+.btn-rodape:hover {
+    background-color: var(--rosa-claro); /*muda o fundo do botão*/
+    color: var(--vinho); /*mantém a cor do texto*/
+    transform: translateY(-3px); /*move o botão para cima*/
+}

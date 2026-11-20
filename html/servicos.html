@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Delicatto Pet Shop</title>
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+    <!-- Menu de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-delicatto">
+        <div class="container">
+            <a class="navbar-brand" href="arquivo.html">Delicatto</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuNavegacao"
+                aria-controls="menuNavegacao"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacao">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="arquivo.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Até aqui reaproveitei a barra de navegação na página um, só mudei o active para a pagina 2-->
+    <!-- Conteúdo principal da página -->
+<main>
+    <!-- Apresentação dos serviços -->
+    <section class="container py-5">
+        <!--container: limita e centraliza a área do conteudo-->
+        <!--py-5: espaçamento vertical-->
+        <div class="text-center mb-5">
+            <!-- alinha o texto no centro e adiciona espaçamento inferior-->
+            <h1 class="titulo-servicos">
+                Nossos Serviços
+            </h1>
+            <p class="lead">
+                No Delicatto Pet Shop, oferecemos cuidados especiais
+                para garantir o bem-estar e a felicidade do seu pet.
+            </p>
+        </div>
+        <!-- Lista de serviços -->
+<div class="row g-4">
+    <!--cria uma linha e define espaçamento para os cards-->
+    
+    <!-- Primeiro serviço -->
+    <div class="col-lg-4 col-md-6">
+        <!--col-lg-4: cada card ocupa 4 das 12 colunas em telas grandes-->
+        <!-- col-md-6: cada card ocupa metade da linha em telas médias-->
+        <div class="card h-100 card-servico">
+            <!-- h100: os card ocupam toda a altura disponível-->
+            <img src="../img/img.banho.jpg"
+                 class="card-img-top"
+                 alt="tomando banho">
+                <!-- img-top: posiciona a imagem no topo do card-->
+            <div class="card-body text-center"> <!-- define a área interna do cartão-->
+                <h3 class="card-title">Banho e Higiene</h3>
+                <p class="card-text">
+                    Cuidados de higiene para manter seu pet limpo,
+                    confortável e bem cuidado.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Segundo serviço -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card h-100 card-servico">
+            <img src="../img/img.hidratacao.webp"
+                 class="card-img-top"
+                 alt="Hidrataçõa dos pelos">
+            <div class="card-body text-center">
+                <h3 class="card-title">Hidratação e Tratamento de Pelagem</h3>
+                <p class="card-text">
+                    Tratamentos especiais para hidratar, nutrir e cuidar da pelagem do seu pet, proporcionando maciez, brilho e uma aparência saudável.
+                </p>
+            </div>
+        </div>
+    </div>
+     <!-- Terceiro serviço -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card h-100 card-servico">
+            <img src="../img/img.tosando.png"
+                 class="card-img-top"
+                 alt="Tosa para não embolar os pelos">
+            <div class="card-body text-center">
+                <h3 class="card-title">Tosa</h3>
+                <p class="card-text">
+                    Cuidados com a pelagem para proporcionar
+                    conforto e bem-estar ao seu melhor amigo.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Quarto serviço -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card h-100 card-servico">
+            <img src="../img/img.enfeite.jpg"
+                 class="card-img-top"
+                 alt="Bichinho cheiroso">
+            <div class="card-body text-center">
+                <h3 class="card-title">Cuidados Especiais</h3>
+                <p class="card-text">
+                    Atenção e carinho em cada detalhe,
+                    respeitando as necessidades de cada pet.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Quinto serviço -->
+<div class="col-lg-4 col-md-6">
+    <div class="card h-100 card-servico">
+        <img src="../img/img.veterinario.webp"
+            class="card-img-top"
+            alt="Atendimento veterinário">
+        <div class="card-body text-center">
+            <h3 class="card-title">Atendimento Veterinário 24h</h3>
+            <p class="card-text">
+                Atendimento veterinário disponível 24 horas,
+                oferecendo assistência e cuidado para seu pet
+                sempre que necessário.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Sexto serviço -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card h-100 card-servico">
+            <img src="../img/img.taxi.png"
+                 class="card-img-top"
+                 alt="Taxí pet">
+            <div class="card-body text-center">
+                <h3 class="card-title">Taxí Pet</h3>
+                <p class="card-text">
+                    Transporte confortável e seguro para levar seu pet a consultas veterinárias, banho, tosa e outros compromissos, com praticidade e cuidado durante todo o trajeto.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+</main>
+<!-- Rodapé da página -->
+<footer class="rodape-delicatto">
+    <!--cria o rodapé e aplica a personalização bonitinha-->
+    <div class="container text-center">
+        <h3>Delicatto Pet Shop</h3>
+        <p class="frase-rodape">
+            Não é apenas sobre cuidados, mas sim carinho,
+            amor e dedicação do início ao fim.
+        </p>
+        <a href="contato.html" class="btn btn-rodape">
+            Entre em contato conosco
+        </a>
+    </div>
+</footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
