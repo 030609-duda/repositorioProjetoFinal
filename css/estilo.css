@@ -23,10 +23,19 @@ body {
 
 /* nome do pet, aumenta o tamanho, define a cor branca e dastaca a fonte */
 .navbar-brand {
-    font-size: 28px; /* tamanho da fonte */
-    font-weight: bold; /* deixa o nome em negrito */
-    letter-spacing: 1px; /* adiciona espaço entre as letras */
-    color: var(--branco); /* cor do nome */
+    display: flex; /*organiza a logo e o nome da marca lado a lado*/
+    align-items: center; /*alinha a logo e o texto*/
+    gap: 12px; /*espaço entre a logo e o texto*/
+    font-size: 55px; /*tamanho da fonte*/
+    font-weight: bold; /*negrito*/
+    letter-spacing: 1px; /*espaçamento entre as letras*/
+    color: var(--branco); /*cor do texto*/
+    text-decoration: none; /*remove o sublinhado do link*/
+}
+
+.navbar-brand img {
+    height: 100px; /*altura da logo*/
+    width: auto; /*ajusta a largura*/
 }
 
 /* links do menu (cor, tamanho, espaçamento e transição)*/

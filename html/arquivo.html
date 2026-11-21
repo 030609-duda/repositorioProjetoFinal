@@ -12,56 +12,47 @@
 </head>
 <body>
     <!--menu de navegação-->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-delicatto">
-        <!-- cria a barra de navegação -->
-        <div class="container">
-            <!-- Centraliza o conteúdo e limita sua largura -->
-            <a class="navbar-brand" href="arquivo.html">Delicatto</a>
-            <!-- cria o nome da marca e direciona para a página inicial ao clicar -->
-            <!--botão do hamburguer para celular-->
-    <button class="navbar-toggler" type="button"
+<nav class="navbar navbar-expand-lg navbar-dark navbar-delicatto">
+    <div class="container">
+        <!--centraliza o conteúdo e limita largura-->
+        <!-- Logo e nome da marca -->
+        <a class="navbar-brand" href="arquivo.html">
+            <img src="../img/logo-delicatto-png.png" alt="Logo Delicatto">
+            <span>Delicatto Pet Shop</span>
+        </a>
+        <!-- Botão do menu hambúrguer -->
+        <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
             data-bs-target="#menuNavegacao"
             aria-controls="menuNavegacao"
-            aria-expanded="false"
-            aria-label="Abrir menu">
-    <!-- class="navbar-toggler": aplica o estilo do botão de menu -->
-    <!-- data-bs-toggle="collapse": ativa a função de expandir e recolher o menu -->
-    <!-- data-bs-target="#menuNavegacao": indica qual elemento será controlado pelo botão -->
-    <!-- aria-controls="menuNavegacao": identifica a área controlada pelo botão para acessibilidade -->
-    <!-- aria-expanded="false": informa que o menu começa recolhido -->
-    <!-- aria-label="Abrir menu": fornece uma descrição do botão para tecnologias assistivas -->
-        <span class="navbar-toggler-icon"></span>
-        <!-- Exibe o ícone de três linhas do botão de menu -->
-    </button>
-    <!--Links do menu-->
-    <div class="collapse navbar-collapse" id="menuNavegacao">
-        <!-- cria a área recolhível que contém os links do menu -->
-        <!-- id: identifica essa área para que o botão consiga controlá-la -->
-        <ul class="navbar-nav ms-auto gap-3">
-            <!-- cria a lista de links de navegação -->
-            <!-- navbar-nav: organiza os links no formato de menu do Bootstrap -->
-            <!-- ms-auto: posiciona os links à direita -->
-            <!-- gap-3: define o espaçamento entre os itens -->
-            <li class="nav-item">
-                <!-- cria um item da lista de navegação -->
-                <a class="nav-link active" href="arquivo.html">Início</a>
-                <!-- cria o link para a página inicial -->
-                <!-- active: indica que esta é a página atualmente selecionada -->
-            </li>
-            <li class="nav-item">
-                <!-- cria outro item da lista -->
-                <a class="nav-link" href="servicos.html">Serviços</a>
-                <!-- cria o link que direciona para a página de serviços -->
-            </li>
-            <li class="nav-item">
-                <!-- cria outro item da lista -->
-                <a class="nav-link" href="contato.html">Contato</a>
-                <!-- cria o link que direciona para a página de contato -->
-            </li>
-        </ul>
+            aria-expanded="false">
+            <!-- navbar-toggler: aplica o estilo de botão de menu do Bootstrap -->
+            <!-- data-bs-toggle="collapse": ativa o sistema de recolhimento do Bootstrap -->
+            <!-- data-bs-target: indica qual elemento será aberto ou fechado -->
+            <!-- aria-controls: identifica o elemento controlado pelo botão -->
+            <!-- aria-expanded: informa inicialmente que o menu está fechado -->
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links de navegação -->
+        <div class="collapse navbar-collapse" id="menuNavegacao">
+              <!-- collapse: permite esconder ou mostrar o conteúdo -->
+            <!-- navbar-collapse: organiza os links dentro da barra de navegação -->
+            <ul class="navbar-nav ms-auto gap-3">
+                <!-- ms-auto: empurra os links para o lado direito -->
+                <!-- gap-3: adiciona espaçamento entre os itens -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="arquivo.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 </nav>
 <!-- Inicia a área principal do conteúdo da página -->
 <main>
@@ -237,7 +228,7 @@
                     proporcionando bem-estar e momentos especiais
                     para os animais e seus tutores.
                 </p>
-            </div>>
+            </div>
             <!-- Card de apresentação -->
             <div class="col-lg-5 mb-4">
                 <!-- cria uma coluna que ocupa 5 partes do grid em telas grandes -->
